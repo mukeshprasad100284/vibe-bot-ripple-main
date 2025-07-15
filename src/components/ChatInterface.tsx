@@ -67,7 +67,7 @@ const ChatInterface = ({ onBack }: ChatInterfaceProps) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo',
+          model: 'deepseek-ai/DeepSeek-V3',
           messages: [
             {
               role: 'system',
@@ -78,7 +78,6 @@ const ChatInterface = ({ onBack }: ChatInterfaceProps) => {
               content: message
             }
           ],
-          temperature: 0.8,
           max_tokens: 100
         })
       });
