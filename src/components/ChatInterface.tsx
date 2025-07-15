@@ -60,14 +60,14 @@ const ChatInterface = ({ onBack }: ChatInterfaceProps) => {
         'bn': 'Bengali'
       };
       
-      const response = await fetch('https://api.deepseek.com/chat/completions', {
+      const response = await fetch('https://api.together.xyz/v1/chat/completions', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'deepseek-chat',
+          model: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo',
           messages: [
             {
               role: 'system',
